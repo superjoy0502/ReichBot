@@ -16,14 +16,8 @@ async def on_ready():
     print("bot online")
 
 
-@bot.command(name="핑")
-async def ping(ctx):
-    await ctx.send('퐁 {0}ms'.format(round(bot.latency*1000)))
+bot.load_extension("commands")
 
 
-@bot.command(name="생성")
-async def create(ctx):
-    await ctx.send("국가 생성 완료")
-
-
-bot.run(os.getenv("TOKEN"))
+if __name__ == "__main__":
+    bot.run(os.getenv("TOKEN"))
