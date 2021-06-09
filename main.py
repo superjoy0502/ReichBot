@@ -18,7 +18,7 @@ async def on_ready():
 
 @bot.command(name="핑")
 async def ping(ctx):
-    await ctx.send('퐁 {0}'.format(round(bot.latency, 1)))
+    await ctx.send('퐁 {0}ms'.format(round(bot.latency*1000)))
 
 
 @bot.command(name="생성")
